@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>local.alfred.direct-unit-converter</string>
+	<key>connections</key>
+	<dict>
+		<key>DIRECT</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>COPY</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Sam / ChatGPT; converter by Alfred Team</string>
+	<key>description</key>
+	<string>Type 37 c to f directly in Alfred. No conv prefix needed.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Unit Converter — Direct Search</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>0||1||2||3||4||5||6||7||8||9||-||+||.</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Converting units…</string>
+				<key>script</key>
+				<string>/usr/bin/python3 ./direct.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Type a value and units, e.g. 37 c to f</string>
+				<key>title</key>
+				<string>Convert units</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DIRECT</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<true/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>COPY</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Type conversions directly in Alfred, e.g. 37 c to f, 98.6 f to c, or 10 km to miles. Return copies the result including its unit. Requires the original Alfred Team Unit Converter workflow installed in the same Alfred preferences library. Direct Search locates it by bundle identifier and runs its engine, using its conversion-format settings. No conversion engine is bundled; updates to the original engine are used automatically. Requires /usr/bin/python3. Ordinary math produces no workflow results.</string>
+	<key>uidata</key>
+	<dict>
+		<key>COPY</key>
+		<dict>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>60</integer>
+		</dict>
+		<key>DIRECT</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>60</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/samhangster/alfred-direct-unit-converter</string>
+</dict>
+</plist>
