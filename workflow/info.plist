@@ -21,7 +21,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Sam / ChatGPT; converter by Alfred Team</string>
+	<string>Samir / ChatGPT; converter by Alfred Team</string>
 	<key>description</key>
 	<string>Type 37 c to f directly in Alfred. No conv prefix needed.</string>
 	<key>disabled</key>
@@ -119,6 +119,6 @@
 	<key>version</key>
 	<string>1.1.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/samhangster/alfred-direct-unit-converter</string>
+	<string>https://github.com/bhron/alfred-direct-unit-converter</string>
 </dict>
 </plist>
